@@ -31,7 +31,7 @@ openssl req -x509 -new -nodes -key myCA.key -sha256 -days 1825 -out myCA.pem
 4. Find `SSLCertificateKeyFile` replace */etc/ssl/private/ssl-cert-snakeoil.key* with your `.key` file path (i.e /var/www/myCA.key).
 
 ## Install SSL on your virtual host
-1. Edit your virtual host `sudo nano /etc/site-enables/yourlocaldomain.local.conf`
+1. Edit your virtual host `sudo nano /etc/site-enables/yourlocaldomain.local.conf` or `sudo nano /etc/apache2/site-enabled/yourlocaldomain.local.conf`
 2. Change default listen port `<VirtualHost *:80>` to `<VirtualHost *:443>`
 3. Add this code bellow `DocumentRoot...`
 ```
